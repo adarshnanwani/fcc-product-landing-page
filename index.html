@@ -19,21 +19,152 @@
             background-color: #f3f0e6;
             padding: 5px;
         }
+
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+        }
+
+        #nav-bar {}
+
+        #nav-bar ul {
+            list-style-type: none;
+        }
+
+        #nav-bar li {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        #nav-bar li a {
+            color: grey;
+            text-decoration: none;
+        }
+
+        .heading {
+            font-family: Lobster, sans-serif;
+            font-size: 18px;
+            display: block;
+            text-align:center;
+            color:gray;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            width: 30%;
+            box-shadow: 0px 0px 5px 2px #ccc;
+            background-color: #fff;
+        }
+
+        .card>.title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 25%;
+            padding: 5px 0 5px 0;
+            border-bottom: 1px solid grey;
+        }
+
+        .card>.content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 75%;
+            padding: 5px 0 5px 0;
+            width: 100%;
+        }
+
+        #form {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 3px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        #submit {
+            border: none;
+            font-family: Cabin, sans-serif;
+            background-color: orange;
+            color: #fff;
+            padding: 5px;
+        }
     </style>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-
+    <header id="header">
+        <img id="header-img" src="logo.png" />
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#product" class="nav-link">Product</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <main id="main">
+        <video id="video">
+            
+        </video>
 
+        <section id="product" class="row">
+
+        </section>
+        <section id="features">
+            <p class="heading">Take a look at the features:</p>
+            <div class="row">
+                <div class="card">
+                    <div class="title">
+                        Title 1
+                    </div>
+                    <div class="content">
+                        Content 1
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="title">
+                        Title 2
+                    </div>
+                    <div class="content">
+                        Content 2
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="title">
+                        Title 3
+                    </div>
+                    <div class="content">
+                        Content 3
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="row">
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input type="email" id="email" required placeholder="someone@example.com" />
+                <input type="submit" id="submit" value="Subscribe">
+            </form>
+        </section>
     </main>
     <footer>
-
+        <div>
+            &copy; 2018
+        </div>
     </footer>
 </body>
 
